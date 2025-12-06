@@ -7,6 +7,10 @@ body {
   color: #333;
 }
 
+p {
+  font-size: small;
+}
+
 header {
   background: #ff6600;
   padding: 40px 20px;
@@ -54,6 +58,19 @@ header h1 {
 
 .fade-slider:active {
   cursor: grabbing;
+}
+
+/* ▼ 院長プロフィール */
+.plan {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.plan img {
+  width: 300px;
+  border-radius: 8px;
 }
 
 /* ▼ 院長プロフィール */
