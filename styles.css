@@ -174,11 +174,11 @@ footer {
 }
 
 .mobile-fixed-bar .phone {
-  background: #0b76d1; /* 青系（電話） */
+  background: #068DC7 /* 青系（電話） */
 }
 
 .mobile-fixed-bar .line {
-  background: #00c300; /* LINE色 */
+  background: #06c755;
 }
 
 
