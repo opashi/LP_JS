@@ -42,37 +42,6 @@ header h1 {
   margin-top: 20px;
 }
 
-/* ▼ スライダー（フェード） */
-.fade-slider {
-  position: relative;
-  width: 100%;
-  height: 480px;
-  overflow: hidden;
-  border-radius: 10px;
-}
-
-.fade-slider img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;     /* 重要！写真サイズを揃える */
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
-
-.fade-slider img.active {
-  opacity: 1;
-}
-
-/* ▼ スワイプ操作のためのカーソル */
-.fade-slider {
-  cursor: grab;
-}
-
-.fade-slider:active {
-  cursor: grabbing;
-}
-
 /* ▼ 施術の流れ */
 .plan {
   display: flex;
@@ -89,14 +58,36 @@ header h1 {
 /* ▼ 院長プロフィール */
 .profile {
   display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  align-items: center;
+  flex-direction: column;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background: #fff;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
 }
 
-.profile img {
-  width: 300px;
-  border-radius: 8px;
+.profile-img img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 12px;
+  margin: 0 auto;
+  display: block;
+}
+
+.profile-text {
+  margin-top: 15px;
+  padding: 0 10px;
+  font-size: 0.9rem;
+  text-align: left;
+  line-height: 1.7;
+}
+
+.profile-text h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
 }
 
 /* ▼ Google Maps */
@@ -176,26 +167,32 @@ header h1 {
 /*　フォトスライダー　*/
 .slider {
   position: relative;
+  padding: 0;
   z-index: 1;
-  height: 100vh;
+  height: 300px;
 }
 
 .slider-item01 {
-  background-image: url('images/slider1.jpeg');
+  background-image: url('images/slider1.jpg');
 }
 .slider-item02 {
-  background-image: url('images/slider2.jpeg');
+  background-image: url('images/slider2.jpg');
 }
 .slider-item03 {
-  background-image: url('images/slider3.jpeg');
+  background-image: url('images/slider3.jpg');
 }
 
 .slider-item {
   width: 100%;
-  height: 100vh;
+  height: 300px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  content: "" !important;
 }
 
 .slick-prev, .slick-next {
@@ -206,8 +203,8 @@ header h1 {
   outline: none;
   border-top: 2px solid #fff;
   border-right: 2px solid #fff;
-  height: 25px;
-  width: 25px;
+  height: 15px;
+  width: 15px;
 }
 
 .slick-prev {
@@ -224,7 +221,7 @@ header h1 {
   position: relative;
   z-index: 3;
   text-align: center;
-  margin: -50px 0 0 0;
+  margin: -25px 0 0 0;
 }
 
 .slick-dots li {
@@ -358,6 +355,22 @@ footer {
     color: #ff6600;
   }
 
+  /* 院長プロフィール */
+  .profile {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  /* ▼ active時：浮き上がる（スマホ用） */
+  .profile.active {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+  }
+
+  .profile-text {
+    border: 1px solid #333;;
+    font-size: xx-small;
+  }
+
   /* ▼ Google Maps */
   .map iframe {
     width: 100%;
@@ -377,15 +390,6 @@ footer {
     height: 160px;
   }
 }
-
-  .profile {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .profile img {
-    width: 150px;
-  }
 }
 
 /* 電話・LINEボタン */
@@ -393,6 +397,34 @@ footer {
 @media (min-width: 769px) {
   .mobile-fixed-bar {
     display: none;
+  }
+
+  .profile {
+    flex-direction: row;
+    align-items: center;
+  
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  @media (hover: hover) { /* ←PCだけ発動 */
+    .profile:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+    }
+  }
+
+
+  .profile-img img {
+    width: 80%;
+    max-width: 280px;
+    margin: 0;
+    border-radius: 50%;
+  }
+
+  .profile-text {
+    flex: 1;
+    margin-left: 20px;
+    font-size: 0.95rem;
   }
 }
 

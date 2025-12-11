@@ -17,3 +17,19 @@ $('.slider').slick({
 $('.slider').on('touchmove', function(event, slick, currentSlide, nextSlide){
   $('.slider').slick('slickPlay');
 });
+
+// ▼ スマホ・タブレット用タップイベント
+document.querySelectorAll('.profile').forEach(card => {
+  card.addEventListener('click', function () {
+
+    // 他のカードが active の場合は解除
+    document.querySelectorAll('.profile.active').forEach(activeCard => {
+      if (activeCard !== this) {
+        activeCard.classList.remove('active');
+      }
+    });
+
+    // 自分をトグル
+    this.classList.toggle('active');
+  });
+});
