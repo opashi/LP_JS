@@ -362,12 +362,12 @@ footer {
 
   /* ▼ active時：浮き上がる（スマホ用） */
   .profile.active {
-    transform: translateY(-6px);
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+    transform: translateY(-10px); 
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18);  
   }
 
   .profile-text {
-    border: 1px solid #333;;
+    border: 1px solid #040404;;
     font-size: xx-small;
   }
 
