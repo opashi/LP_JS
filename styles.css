@@ -30,6 +30,54 @@ header h1 {
   margin: auto;
 }
 
+/* splash */
+#splash {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ff6600;
+  text-align: center;
+  color: #fff;
+  z-index: 9999;
+}
+
+#splash-logo {
+  position: relative;
+  top: 40%;
+  margin: 0;
+  transform: translate(-50%, -50%);
+}
+
+#splash-logo h1 {
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+#splash-logo p {
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+.fadeUp {
+  animation-name: fadeUpAnime;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* ▼ ヒーローセクション */
 .hero {
   text-align: center;
@@ -346,59 +394,14 @@ footer {
 }
 
 
-/* splash */
-#splash {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #ff6600;
-  text-align: center;
-  color: #fff;
-  z-index: 9999;
-}
-
-#splash-logo {
-  position: relative;
-  top: 40%;
-  margin: 0;
-  transform: translate(-50%, -50%);
-}
-
-#splash-logo h1 {
-  font-size: 1.6rem;
-  margin: 0;
-}
-
-#splash-logo p {
-  font-size: 1rem;
-  margin-top: 10px;
-}
-
-.fadeUp {
-  animation-name: fadeUpAnime;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
-  opacity: 0;
-}
-
-@keyframes fadeUpAnime {
-  from {
-    opacity: 0;
-    transform: translateY(100px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-
 /* -------------------------
   レスポンシブ対応
 --------------------------*/
 @media (max-width: 768px) {
+  body {
+    padding-bottom: 70px; /* 固定バーの高さ分 */
+  }
+
   header {
     background: #ff6600;
     padding: 10px 20px;
@@ -479,11 +482,9 @@ footer {
     border-radius: 8px;
   }
 
-@media (max-width: 768px) {
   .fade-slider {
     height: 200px;
   }
-}
 
 @media (max-width: 480px) {
   .fade-slider {
@@ -492,9 +493,103 @@ footer {
 }
 }
 
-/* 電話・LINEボタン */
-/* スマホのみ表示する（PCでは非表示） */
+/* =========================
+  PCレイアウト調整
+  769px以上のみ適用
+========================= */
 @media (min-width: 769px) {
+
+  /* セクション全体を少し広く */
+  .section {
+    max-width: 1100px;
+    padding: 60px 40px;
+  }
+
+  /* -------------------------
+    ヒーロー
+    画像を大きく見せる
+  ------------------------- */
+  .hero img {
+    width: 50%;
+  }
+
+  /* -------------------------
+    About
+    文章＋画像を横並び想定
+  ------------------------- */
+  .about {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .about img {
+    width: 50%;
+    margin-top: 0;
+  }
+
+  /* -------------------------
+    施術の流れ
+    画像左・文章右
+  ------------------------- */
+  .plan {
+    flex-wrap: nowrap;
+    align-items: flex-start;
+  }
+
+  .plan img {
+    width: 360px;
+  }
+
+  .plan-sentence {
+    font-size: 1rem;
+  }
+
+  /* -------------------------
+    Google Maps
+    情報を横並び
+  ------------------------- */
+  .map .section {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+  }
+
+  .map iframe {
+    flex: 2;
+    height: 350px;
+  }
+
+  .parking,
+  .station {
+    justify-content: flex-start;
+  }
+
+  /* -------------------------
+    CTA
+    ボタンを中央で目立たせる
+  ------------------------- */
+  .cta {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .tel {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  /* -------------------------
+    フォトスライダー
+    高さを少し強調
+  ------------------------- */
+  .slider,
+  .slider-item {
+    height: 380px;
+  }
+
+  /* 電話・LINEボタン */
+  /* スマホのみ表示する（PCでは非表示） */
   .mobile-fixed-bar {
     display: none;
   }
@@ -513,7 +608,6 @@ footer {
     }
   }
 
-
   .profile-img img {
     width: 80%;
     max-width: 280px;
@@ -527,11 +621,3 @@ footer {
     font-size: 0.95rem;
   }
 }
-
-/* 下部バーが隠れないように余白追加 */
-@media (max-width: 768px) {
-  body {
-    padding-bottom: 70px; /* 固定バーの高さ分 */
-  }
-}
-
