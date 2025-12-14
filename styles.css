@@ -249,6 +249,56 @@ header h1 {
   margin-right: 10px;
 }
 
+/* =========================
+  診療時間テーブル
+  受付時間・曜日表
+========================= */
+.timetable-section {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.timetable {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background: #fff;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+/* 枠線 */
+.timetable th,
+.timetable td {
+  border: 1px solid #ccc;
+  padding: 12px 8px;
+}
+
+/* ヘッダー行 */
+.timetable th {
+  background: #ff6600;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* 受付時間列 */
+.timetable td:first-child {
+  font-weight: bold;
+  background: #fff5eb;
+}
+
+/* 日・祝を少し目立たせる */
+.timetable th:last-child {
+  background: #e74c3c;
+}
+
+/* 〇の見た目 */
+.timetable td:not(:first-child) {
+  font-size: 1.1rem;
+}
+
+
 /*　フォトスライダー　*/
 .slider {
   position: relative;
@@ -484,6 +534,16 @@ footer {
 
   .fade-slider {
     height: 200px;
+  }
+
+  /* 診療時間テーブル */
+  .timetable {
+    font-size: 0.85rem;
+  }
+
+  .timetable th,
+  .timetable td {
+    padding: 8px 4px;
   }
 
 @media (max-width: 480px) {
