@@ -24,12 +24,6 @@ header h1 {
   font-size: 2rem;
 }
 
-.section {
-  padding: 40px 20px;
-  max-width: 900px;
-  margin: auto;
-}
-
 /* splash */
 #splash {
   position: fixed;
@@ -90,6 +84,12 @@ header h1 {
 }
 
 /* ▼ aboutセクション */
+.about {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
 .about img {
   width: 100%;
   border-radius: 8px;
@@ -127,6 +127,12 @@ header h1 {
 }
 
 /* ▼ 院長プロフィール */
+.staff{
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
 .profile {
   display: flex;
   flex-direction: column;
@@ -163,6 +169,8 @@ header h1 {
 
 /* ▼ Google Maps */
 .map {
+  padding: 40px 20px;
+  margin: auto;
   background-color: #ffe0c1;
 }
 
@@ -192,13 +200,93 @@ header h1 {
   background-color: #ffe0c1;
   padding-top: 20px;
   padding-bottom: 40px;
-  max-width: 900px;
   margin-left: auto;
   margin-right: auto;
 }
 
+.slider {
+  position: relative;
+  padding: 0;
+  z-index: 1;
+  height: 300px;
+}
+
+.slider-item01 {
+  background-image: url('images/slider1.jpg');
+}
+.slider-item02 {
+  background-image: url('images/slider2.jpg');
+}
+.slider-item03 {
+  background-image: url('images/slider3.jpg');
+}
+
+.slider-item {
+  width: 100%;
+  height: 300px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  content: "" !important;
+}
+
+.slick-prev, .slick-next {
+  position: absolute;
+  z-index: 3;
+  top: 42%;
+  cursor: pointer;
+  outline: none;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  height: 15px;
+  width: 15px;
+}
+
+.slick-prev {
+  left: 2.5%;
+  transform: rotate(-135deg);
+}
+
+.slick-next {
+  right: 2.5%;
+  transform: rotate(45deg);
+}
+
+.slick-dots {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  margin: -25px 0 0 0;
+}
+
+.slick-dots li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.slick-dots button {
+  color: transparent;
+  outline: none;
+  width: 8px;
+  height: 8px;
+  display: block;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.slick-dots .slick-active button {
+  background: #333;
+}
+
 /* ▼ CTA */
 .cta {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
   text-align: center;
 }
 
@@ -298,88 +386,11 @@ header h1 {
   font-size: 1.1rem;
 }
 
-
-/*　フォトスライダー　*/
-.slider {
-  position: relative;
-  padding: 0;
-  z-index: 1;
-  height: 300px;
-}
-
-.slider-item01 {
-  background-image: url('images/slider1.jpg');
-}
-.slider-item02 {
-  background-image: url('images/slider2.jpg');
-}
-.slider-item03 {
-  background-image: url('images/slider3.jpg');
-}
-
-.slider-item {
-  width: 100%;
-  height: 300px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
-.slick-prev:before,
-.slick-next:before {
-  content: "" !important;
-}
-
-.slick-prev, .slick-next {
-  position: absolute;
-  z-index: 3;
-  top: 42%;
-  cursor: pointer;
-  outline: none;
-  border-top: 2px solid #fff;
-  border-right: 2px solid #fff;
-  height: 15px;
-  width: 15px;
-}
-
-.slick-prev {
-  left: 2.5%;
-  transform: rotate(-135deg);
-}
-
-.slick-next {
-  right: 2.5%;
-  transform: rotate(45deg);
-}
-
-.slick-dots {
-  position: relative;
-  z-index: 3;
-  text-align: center;
-  margin: -25px 0 0 0;
-}
-
-.slick-dots li {
-  display: inline-block;
-  margin: 0 5px;
-}
-
-.slick-dots button {
-  color: transparent;
-  outline: none;
-  width: 8px;
-  height: 8px;
-  display: block;
-  border-radius: 50%;
-  background: #fff;
-}
-
-.slick-dots .slick-active button {
-  background: #333;
-}
-
 /* treat */
 .treats {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
   margin-top: 20px;
   font-size: small;
   text-align: center;
@@ -525,6 +536,23 @@ footer {
   }
 
   /* ▼ Google Maps */
+  .map {
+    display:flex;
+    flex-direction: column;
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: auto;
+  }
+
+  .map-pc {
+    display: none;
+  }
+
+  .map-mobile {
+    display: block;
+    margin-bottom: 20px;
+  }
+
   .map iframe {
     width: 100%;
     height: 250px;
@@ -559,93 +587,8 @@ footer {
 ========================= */
 @media (min-width: 769px) {
 
-  /* セクション全体を少し広く */
-  .section {
-    max-width: 1100px;
-    padding: 60px 40px;
-  }
-
-  /* -------------------------
-    ヒーロー
-    画像を大きく見せる
-  ------------------------- */
-  .hero img {
-    width: 50%;
-  }
-
-  /* -------------------------
-    About
-    文章＋画像を横並び想定
-  ------------------------- */
-  .about {
-    display: flex;
-    gap: 40px;
-    align-items: center;
-  }
-
-  .about img {
-    width: 50%;
-    margin-top: 0;
-  }
-
-  /* -------------------------
-    施術の流れ
-    画像左・文章右
-  ------------------------- */
-  .plan {
-    flex-wrap: nowrap;
-    align-items: flex-start;
-  }
-
-  .plan img {
-    width: 360px;
-  }
-
-  .plan-sentence {
-    font-size: 1rem;
-  }
-
-  /* -------------------------
-    Google Maps
-    情報を横並び
-  ------------------------- */
-  .map .section {
-    display: flex;
-    gap: 40px;
-    align-items: flex-start;
-  }
-
-  .map iframe {
-    flex: 2;
-    height: 350px;
-  }
-
-  .parking,
-  .station {
-    justify-content: flex-start;
-  }
-
-  /* -------------------------
-    CTA
-    ボタンを中央で目立たせる
-  ------------------------- */
-  .cta {
-    max-width: 700px;
-    margin: 0 auto;
-  }
-
-  .tel {
-    max-width: 500px;
-    margin: 0 auto;
-  }
-
-  /* -------------------------
-    フォトスライダー
-    高さを少し強調
-  ------------------------- */
-  .slider,
-  .slider-item {
-    height: 380px;
+  p {
+    font-size: medium;
   }
 
   /* 電話・LINEボタン */
@@ -666,6 +609,43 @@ footer {
       transform: translateY(-6px);
       box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
     }
+  }
+
+  .map-header {
+    max-width: 900px;
+    margin: auto;
+  }
+
+  .flex-map1 {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .map iframe {
+    width: 500px;
+    height: 400px;
+  }
+
+  .map-mobile {
+    display: none;
+  }
+
+  .flex-map2 {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+  }
+
+  .photo-slider {
+    height: 500px;
+  }
+
+  .slider {
+    height: 500px;
+    max-width: 900px;
+    margin: auto;
   }
 
   .profile-img img {

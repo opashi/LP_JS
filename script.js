@@ -1,3 +1,11 @@
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual';
+}
+
+window.addEventListener('load', () => {
+  window.scrollTo(0, 0);
+});
+
 $('.slider').slick({
   autoplaySpeed: 3000,
   speed: 1000,
