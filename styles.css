@@ -13,7 +13,7 @@ p {
 }
 
 header {
-  background: #ff6600;
+  background: #F25F00;
   padding: 40px 20px;
   text-align: center;
   color: #fff;
@@ -104,28 +104,6 @@ header h1 {
   padding-bottom: 20px;
 }
 
-.plan {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-.plan img {
-  width: 300px;
-  border-radius: 8px;
-}
-
-.plan-sentence {
-  flex: 1;
-  font-size: medium;
-  border: 1px solid #333;
-  padding: 20px;
-  border-radius: 8px;
-  background: #fff;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
-}
-
 /* ▼ 院長プロフィール */
 .staff{
   padding: 40px 20px;
@@ -147,8 +125,7 @@ header h1 {
 .profile-img img {
   width: 100%;
   max-width: 350px;
-  border-radius: 12px;
-  margin: 0 auto;
+  margin: auto;
   display: block;
 }
 
@@ -463,11 +440,19 @@ footer {
     padding-bottom: 70px; /* 固定バーの高さ分 */
   }
 
+  .sp-only {
+    display: inline;
+  }
+
   header {
     background: #ff6600;
     padding: 10px 20px;
     text-align: center;
     color: #fff;
+  }
+
+  header img {
+    display: none;
   }
 
   header h1 {
@@ -494,24 +479,34 @@ footer {
     margin: 20px;
   }
 
-  .plan {
-    gap: 20px;
-    align-items: center;
-    padding: 0px;
-    margin-bottom: 20px;
+  .plan-PC {
+    display: none;
   }
+
+  .plan {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0px;
+  margin-bottom: 20px;
+}
+
+.plan-sentence {
+  flex: 1;
+  border: 1px solid #333;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  margin: 0px 20px;
+  font-size: small;
+  padding: 15px;
+}
 
   .plan img {
     height: 80%;
     width: 100%;
     border-radius: 0px;
-  }
-
-  .plan-sentence {
-    margin: 0px 20px;
-    font-size: small;
-    border: 1px solid #333;
-    padding: 15px;
   }
 
   .plan-sentence h3 {
@@ -587,8 +582,19 @@ footer {
 ========================= */
 @media (min-width: 769px) {
 
+  header img {
+    position: absolute;
+    width: 150px;
+    top: 20px;
+    left: 20px;
+  }
+
   p {
     font-size: medium;
+  }
+
+  .sp-only {
+    display: none;
   }
 
   /* 電話・LINEボタン */
@@ -600,8 +606,7 @@ footer {
   .profile {
     flex-direction: row;
     align-items: center;
-  
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
 
   @media (hover: hover) { /* ←PCだけ発動 */
@@ -611,6 +616,50 @@ footer {
     }
   }
 
+  /* ▼ 施術の流れ */
+  .plan-mobile {
+    display: none;
+  }
+
+  .plan-header {
+    max-width: 900px;
+    margin: auto;
+  }
+
+  .plan {
+    width: 60%;
+    margin: 20px auto;
+    align-items: center;
+    display: flex;
+    border: 1px solid #333;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 20px;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.0s ease, transform 1.0s ease;
+  }
+
+  .plan.is-show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .plan img {
+    width: 300px;
+    border-radius: 8px;
+  }
+
+  .plan-sentence {
+    flex: 1;
+    font-size: medium;
+  }
+
+  /* ▼ Google Maps */
   .map-header {
     max-width: 900px;
     margin: auto;
@@ -638,6 +687,7 @@ footer {
     margin-left: 20px;
   }
 
+  /* ▼ フォトスライダー */
   .photo-slider {
     height: 500px;
   }
@@ -648,11 +698,14 @@ footer {
     margin: auto;
   }
 
+  .slider-item {
+    height: 500px;
+  }
+
+  /* ▼ 院長プロフィール */
   .profile-img img {
     width: 80%;
     max-width: 280px;
-    margin: 0;
-    border-radius: 50%;
   }
 
   .profile-text {

@@ -47,3 +47,26 @@ $(window).on('load', function() {
   $('#splash').delay(1500).fadeOut('slow');
   $('#splash-logo').delay(1200).fadeOut('slow');
 });
+
+// PC版 Planの表示
+document.addEventListener("DOMContentLoaded", () => {
+  const targets = document.querySelectorAll(".plan");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-show");
+        }
+        else {
+          entry.target.classList.remove("is-show");
+        }
+      });
+    },
+    {
+      threshold: 0.3 // 30%表示されたら発火
+    }
+  );
+
+  targets.forEach(target => observer.observe(target));
+});
