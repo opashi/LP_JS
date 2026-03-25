@@ -104,6 +104,313 @@ header h1 {
   padding-bottom: 20px;
 }
 
+.accordion {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  gap: 2%;
+  margin: auto;
+}
+
+.accordion-mobile {
+  display: none;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  gap: 2%;
+  margin: auto;
+}
+
+.accordion-btn{
+  width: 90px;
+  height: 90px;
+  background-color: #ccc;
+  background-size: cover;
+  margin-bottom: 15px;
+}
+
+.accordion-content {
+  display: none;
+  overflow: hidden;
+  text-align: left;
+  width: 100%;
+  padding: 0px;
+  margin-bottom: 15px;
+  height: auto;
+  overflow: auto;
+}
+
+.treats p {
+  padding: 10px 20px;
+  border: 1px solid #333;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+}
+
+.accordion-content.active {
+  display: block;
+  width: 100%;
+}
+
+.treats1{
+  background-image: url(images/treats1.png);
+}
+
+.treats1.active{
+  background-image: url(images/treats1_active.png);
+}
+
+.treats2 {
+  background-image: url(images/treats2.png);
+}
+
+.treats2.active{
+  background-image: url(images/treats2_active.png);
+}
+
+.treats3 {
+  background-image: url(images/treats3.png);
+}
+
+.treats3.active{
+  background-image: url(images/treats3_active.png);
+}
+
+.treats4{
+  background-image: url(images/treats4.png);
+}
+
+.treats4.active{
+  background-image: url(images/treats4_active.png);
+}
+
+.treats5 {
+  background-image: url(images/treats5.png);
+}
+
+.treats5.active{
+  background-image: url(images/treats5_active.png);
+}
+
+.treats6 {
+  background-image: url(images/treats6.png);
+}
+
+.treats6.active{
+  background-image: url(images/treats6_active.png);
+}
+
+
+.treats7{
+  background-image: url(images/treats7.png);
+}
+
+.treats7.active{
+  background-image: url(images/treats7_active.png);
+}
+
+.treats8 {
+  background-image: url(images/treats8.png);
+}
+
+.treats8.active{
+  background-image: url(images/treats8_active.png);
+}
+
+.treats9 {
+  background-image: url(images/treats9.png);
+}
+
+.treats9.active{
+  background-image: url(images/treats9_active.png);
+}
+
+.treats10{
+  background-image: url(images/treats10.png);
+}
+
+.treats10.active{
+  background-image: url(images/treats10_active.png);
+}
+
+.treats11 {
+  background-image: url(images/treats11.png);
+}
+
+.treats11.active{
+  background-image: url(images/treats11_active.png);
+}
+
+.treats12 {
+  background-image: url(images/treats12.png);
+}
+
+.treats12.active{
+  background-image: url(images/treats12_active.png);
+}
+
+.treats13{
+  background-image: url(images/treats13.png);
+}
+
+.treats13.active{
+  background-image: url(images/treats13_active.png);
+}
+
+.treats14 {
+  background-image: url(images/treats14.png);
+}
+
+.treats14.active{
+  background-image: url(images/treats14_active.png);
+}
+
+.treats15 {
+  background-image: url(images/treats15.png);
+}
+
+.treats15.active{
+  background-image: url(images/treats15_active.png);
+}
+
+.treats16{
+  background-image: url(images/treats16.png);
+}
+
+.treats16.active{
+  background-image: url(images/treats16_active.png);
+}
+
+.treats17 {
+  background-image: url(images/treats17.png);
+}
+
+.treats17.active{
+  background-image: url(images/treats17_active.png);
+}
+
+.treats18 {
+  background-image: url(images/treats18.png);
+}
+
+.treats18.active{
+  background-image: url(images/treats18_active.png);
+}
+
+.treats19 {
+  background-image: url(images/treats19.png);
+}
+
+.treats19.active{
+  background-image: url(images/treats19_active.png);
+}
+
+.treats20 {
+  background-image: url(images/treats20.png);
+}
+
+.treats20.active{
+  background-image: url(images/treats20_active.png);
+}
+
+.treats21 {
+  background-image: url(images/treats21.png);
+}
+
+.treats21.active{
+  background-image: url(images/treats21_active.png);
+}
+
+.treats22 {
+  background-image: url(images/treats22.png);
+}
+
+.treats22.active{
+  background-image: url(images/treats22_active.png);
+}
+
+.treats23 {
+  background-image: url(images/treats23.png);
+}
+
+.treats23.active{
+  background-image: url(images/treats23_active.png);
+}
+
+.treats24 {
+  background-image: url(images/treats24.png);
+}
+
+.treats24.active{
+  background-image: url(images/treats24_active.png);
+}
+
+.treats25 {
+  background-image: url(images/treats25.png);
+}
+
+.treats25.active{
+  background-image: url(images/treats25_active.png);
+}
+
+.treats26 {
+  background-image: url(images/treats26.png);
+}
+
+.treats26.active{
+  background-image: url(images/treats26_active.png);
+}
+
+.treats27 {
+  background-image: url(images/treats27.png);
+}
+
+.treats27.active{
+  background-image: url(images/treats27_active.png);
+}
+
+.treats28 {
+  background-image: url(images/treats28.png);
+}
+
+.treats28.active{
+  background-image: url(images/treats28_active.png);
+}
+
+.treats29 {
+  background-image: url(images/treats29.png);
+}
+
+.treats29.active{
+  background-image: url(images/treats29_active.png);
+}
+
+.treats30 {
+  background-image: url(images/treats30.png);
+}
+
+.treats30.active{
+  background-image: url(images/treats30_active.png);
+}
+
+.treats31 {
+  background-image: url(images/treats31.png);
+}
+
+.treats31.active{
+  background-image: url(images/treats31_active.png);
+}
+
+.treats32 {
+  background-image: url(images/treats32.png);
+}
+
+.treats32.active{
+  background-image: url(images/treats32_active.png);
+}
+
 /* ▼ 院長プロフィール */
 .staff{
   padding: 40px 20px;
@@ -127,6 +434,7 @@ header h1 {
   max-width: 350px;
   margin: auto;
   display: block;
+  border-radius: 12px;
 }
 
 .profile-text {
@@ -557,6 +865,27 @@ footer {
 
   .fade-slider {
     height: 200px;
+  }
+
+  .accordion {
+    display: none;
+  }
+
+  .accordion-mobile {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    gap: 2%;
+    margin: auto;
+  }
+
+  .accordion-btn{
+    width: 70px;
+    height: 70px;
+    background-color: #ffeddb;
+    background-size: cover;
+    margin-bottom: 15px;
   }
 
   /* 診療時間テーブル */

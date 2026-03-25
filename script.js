@@ -70,3 +70,68 @@ document.addEventListener("DOMContentLoaded", () => {
 
   targets.forEach(target => observer.observe(target));
 });
+
+$(function(){
+	var btNo;
+	$(".accordion .accordion-btn").click(function(){
+    btNo = $(this).index()+9;
+    console.log("btNo: " + btNo);
+		var activeNo =  $(".accordion div.active").index()+1;
+    console.log("activeNo: " + activeNo);
+		$(".accordion-content").removeClass("active");
+		$(".accordion-content:nth-child(" + (btNo)  +")").addClass("active");
+		$(".accordion-btn").removeClass("thisOn");
+		$(this).addClass("thisOn");
+
+		if( btNo == activeNo ){ $(".accordion-content").removeClass("active"); $(".accordion-btn").removeClass("thisOn"); }
+
+    // 他のアコーディオンが active の場合は解除
+    document.querySelectorAll('.accordion-btn.active').forEach(activeAccordion => {
+      if (activeAccordion !== this) {
+        activeAccordion.classList.remove('active');
+      }
+    });
+
+    // 自分をトグル
+    this.classList.add('active');
+	});
+
+  $(".accordion-mobile .accordion-btn").click(function(){
+    var btnIndex = $(this).index();
+    var btNo;
+    if (btnIndex <= 4) {
+      btNo = btnIndex + 6;
+    } else if (btnIndex <= 14) {
+      btNo = btnIndex + 6;
+    } else if (btnIndex <= 24) {
+      btNo = btnIndex + 6;
+    } else if (btnIndex <= 34) {
+      btNo = btnIndex + 6;
+    } else if (btnIndex <= 44) {
+      btNo = btnIndex + 6;
+    } else if (btnIndex <= 54) {
+      btNo = btnIndex + 6;
+    } else {
+      btNo = btnIndex + 3;
+    }
+    console.log("btNo: " + btNo);
+		var activeNo =  $(".accordion-mobile div.active").index()+1;
+    console.log("activeNo: " + activeNo);
+		$(".accordion-content").removeClass("active");
+		$(".accordion-content:nth-child(" + (btNo)  +")").addClass("active");
+		$(".accordion-btn").removeClass("thisOn");
+		$(this).addClass("thisOn");
+
+		if( btNo == activeNo ){ $(".accordion-content").removeClass("active"); $(".accordion-btn").removeClass("thisOn"); }
+
+    // 他のアコーディオンが active の場合は解除
+    document.querySelectorAll('.accordion-btn.active').forEach(activeAccordion => {
+      if (activeAccordion !== this) {
+        activeAccordion.classList.remove('active');
+      }
+    });
+
+    // 自分をトグル
+    this.classList.add('active');
+	});
+});
