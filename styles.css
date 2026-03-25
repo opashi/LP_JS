@@ -104,6 +104,28 @@ header h1 {
   padding-bottom: 20px;
 }
 
+/* treat */
+.treats {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+  margin-top: 20px;
+  font-size: small;
+  text-align: center;
+  border: 2px solid #333;
+  border-radius: 8px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+}
+
+.treats p {
+  margin: 10px 20px;
+  border: 2px solid #333;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+}
+
 .accordion {
   display: flex;
   flex-wrap: wrap;
@@ -125,7 +147,7 @@ header h1 {
 .accordion-btn{
   width: 90px;
   height: 90px;
-  background-color: #ccc;
+  background-color: #ffeddb;
   background-size: cover;
   margin-bottom: 15px;
 }
@@ -139,14 +161,6 @@ header h1 {
   margin-bottom: 15px;
   height: auto;
   overflow: auto;
-}
-
-.treats p {
-  padding: 10px 20px;
-  border: 1px solid #333;
-  border-radius: 8px;
-  background: #fff;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
 }
 
 .accordion-content.active {
@@ -201,7 +215,6 @@ header h1 {
 .treats6.active{
   background-image: url(images/treats6_active.png);
 }
-
 
 .treats7{
   background-image: url(images/treats7.png);
@@ -671,23 +684,6 @@ header h1 {
   font-size: 1.1rem;
 }
 
-/* treat */
-.treats {
-  padding: 40px 20px;
-  max-width: 900px;
-  margin: auto;
-  margin-top: 20px;
-  font-size: small;
-  text-align: center;
-}
-
-.treats p {
-  margin: 5px 20px;
-  border: 2px solid #333;
-  padding: 20px 0px;
-  border-radius: 12px;
-}
-
 /* ▼ フッター */
 
 footer {
@@ -867,6 +863,10 @@ footer {
     height: 200px;
   }
 
+  .treats {
+    margin: 20px 10px;
+  }
+
   .accordion {
     display: none;
   }
@@ -881,8 +881,8 @@ footer {
   }
 
   .accordion-btn{
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     background-color: #ffeddb;
     background-size: cover;
     margin-bottom: 15px;
